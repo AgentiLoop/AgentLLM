@@ -1,0 +1,47 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "AgentLLM-arm64-apple-macosx-debug.module": ["<AgentLLM-arm64-apple-macosx-debug.module>"]
+  "PackageStructure": ["<PackageStructure>"]
+  "main": ["<AgentLLM-arm64-apple-macosx-debug.module>"]
+  "test": ["<AgentLLM-arm64-apple-macosx-debug.module>"]
+default: "main"
+nodes:
+  "/Users/toddbruss/Documents/GitHub/AgentLLM/Sources/AgentLLM/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+commands:
+  "/Users/toddbruss/Documents/GitHub/AgentLLM/.build/arm64-apple-macosx/debug/AgentLLM.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/toddbruss/Documents/GitHub/AgentLLM/Sources/AgentLLM/AgentLLM.swift","/Users/toddbruss/Documents/GitHub/AgentLLM/Sources/AgentLLM/LLMCapability.swift","/Users/toddbruss/Documents/GitHub/AgentLLM/Sources/AgentLLM/LLMEndpoint.swift","/Users/toddbruss/Documents/GitHub/AgentLLM/Sources/AgentLLM/LLMModelInfo.swift","/Users/toddbruss/Documents/GitHub/AgentLLM/Sources/AgentLLM/LLMProvider.swift","/Users/toddbruss/Documents/GitHub/AgentLLM/Sources/AgentLLM/LLMProviderConfig.swift","/Users/toddbruss/Documents/GitHub/AgentLLM/Sources/AgentLLM/LLMProviderKind.swift","/Users/toddbruss/Documents/GitHub/AgentLLM/Sources/AgentLLM/LLMRegistry.swift","/Users/toddbruss/Documents/GitHub/AgentLLM/Sources/AgentLLM/LLMResponse.swift"]
+    outputs: ["/Users/toddbruss/Documents/GitHub/AgentLLM/.build/arm64-apple-macosx/debug/AgentLLM.build/sources"]
+    description: "Write auxiliary file /Users/toddbruss/Documents/GitHub/AgentLLM/.build/arm64-apple-macosx/debug/AgentLLM.build/sources"
+
+  "/Users/toddbruss/Documents/GitHub/AgentLLM/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"]
+    outputs: ["/Users/toddbruss/Documents/GitHub/AgentLLM/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/toddbruss/Documents/GitHub/AgentLLM/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+
+  "<AgentLLM-arm64-apple-macosx-debug.module>":
+    tool: phony
+    inputs: ["/Users/toddbruss/Documents/GitHub/AgentLLM/.build/arm64-apple-macosx/debug/AgentLLM.build/AgentLLM.swift.o","/Users/toddbruss/Documents/GitHub/AgentLLM/.build/arm64-apple-macosx/debug/AgentLLM.build/LLMCapability.swift.o","/Users/toddbruss/Documents/GitHub/AgentLLM/.build/arm64-apple-macosx/debug/AgentLLM.build/LLMEndpoint.swift.o","/Users/toddbruss/Documents/GitHub/AgentLLM/.build/arm64-apple-macosx/debug/AgentLLM.build/LLMModelInfo.swift.o","/Users/toddbruss/Documents/GitHub/AgentLLM/.build/arm64-apple-macosx/debug/AgentLLM.build/LLMProvider.swift.o","/Users/toddbruss/Documents/GitHub/AgentLLM/.build/arm64-apple-macosx/debug/AgentLLM.build/LLMProviderConfig.swift.o","/Users/toddbruss/Documents/GitHub/AgentLLM/.build/arm64-apple-macosx/debug/AgentLLM.build/LLMProviderKind.swift.o","/Users/toddbruss/Documents/GitHub/AgentLLM/.build/arm64-apple-macosx/debug/AgentLLM.build/LLMRegistry.swift.o","/Users/toddbruss/Documents/GitHub/AgentLLM/.build/arm64-apple-macosx/debug/AgentLLM.build/LLMResponse.swift.o","/Users/toddbruss/Documents/GitHub/AgentLLM/.build/arm64-apple-macosx/debug/Modules/AgentLLM.swiftmodule"]
+    outputs: ["<AgentLLM-arm64-apple-macosx-debug.module>"]
+
+  "C.AgentLLM-arm64-apple-macosx-debug.module":
+    tool: shell
+    inputs: ["/Users/toddbruss/Documents/GitHub/AgentLLM/Sources/AgentLLM/AgentLLM.swift","/Users/toddbruss/Documents/GitHub/AgentLLM/Sources/AgentLLM/LLMCapability.swift","/Users/toddbruss/Documents/GitHub/AgentLLM/Sources/AgentLLM/LLMEndpoint.swift","/Users/toddbruss/Documents/GitHub/AgentLLM/Sources/AgentLLM/LLMModelInfo.swift","/Users/toddbruss/Documents/GitHub/AgentLLM/Sources/AgentLLM/LLMProvider.swift","/Users/toddbruss/Documents/GitHub/AgentLLM/Sources/AgentLLM/LLMProviderConfig.swift","/Users/toddbruss/Documents/GitHub/AgentLLM/Sources/AgentLLM/LLMProviderKind.swift","/Users/toddbruss/Documents/GitHub/AgentLLM/Sources/AgentLLM/LLMRegistry.swift","/Users/toddbruss/Documents/GitHub/AgentLLM/Sources/AgentLLM/LLMResponse.swift","/Users/toddbruss/Documents/GitHub/AgentLLM/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/toddbruss/Documents/GitHub/AgentLLM/.build/arm64-apple-macosx/debug/AgentLLM.build/sources"]
+    outputs: ["/Users/toddbruss/Documents/GitHub/AgentLLM/.build/arm64-apple-macosx/debug/AgentLLM.build/AgentLLM.swift.o","/Users/toddbruss/Documents/GitHub/AgentLLM/.build/arm64-apple-macosx/debug/AgentLLM.build/LLMCapability.swift.o","/Users/toddbruss/Documents/GitHub/AgentLLM/.build/arm64-apple-macosx/debug/AgentLLM.build/LLMEndpoint.swift.o","/Users/toddbruss/Documents/GitHub/AgentLLM/.build/arm64-apple-macosx/debug/AgentLLM.build/LLMModelInfo.swift.o","/Users/toddbruss/Documents/GitHub/AgentLLM/.build/arm64-apple-macosx/debug/AgentLLM.build/LLMProvider.swift.o","/Users/toddbruss/Documents/GitHub/AgentLLM/.build/arm64-apple-macosx/debug/AgentLLM.build/LLMProviderConfig.swift.o","/Users/toddbruss/Documents/GitHub/AgentLLM/.build/arm64-apple-macosx/debug/AgentLLM.build/LLMProviderKind.swift.o","/Users/toddbruss/Documents/GitHub/AgentLLM/.build/arm64-apple-macosx/debug/AgentLLM.build/LLMRegistry.swift.o","/Users/toddbruss/Documents/GitHub/AgentLLM/.build/arm64-apple-macosx/debug/AgentLLM.build/LLMResponse.swift.o","/Users/toddbruss/Documents/GitHub/AgentLLM/.build/arm64-apple-macosx/debug/Modules/AgentLLM.swiftmodule"]
+    description: "Compiling Swift Module 'AgentLLM' (9 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","AgentLLM","-emit-dependencies","-emit-module","-emit-module-path","/Users/toddbruss/Documents/GitHub/AgentLLM/.build/arm64-apple-macosx/debug/Modules/AgentLLM.swiftmodule","-output-file-map","/Users/toddbruss/Documents/GitHub/AgentLLM/.build/arm64-apple-macosx/debug/AgentLLM.build/output-file-map.json","-parse-as-library","-incremental","-c","@/Users/toddbruss/Documents/GitHub/AgentLLM/.build/arm64-apple-macosx/debug/AgentLLM.build/sources","-I","/Users/toddbruss/Documents/GitHub/AgentLLM/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx26.0","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/toddbruss/Documents/GitHub/AgentLLM/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j10","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/toddbruss/Documents/GitHub/AgentLLM/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/toddbruss/Documents/GitHub/AgentLLM/.build/arm64-apple-macosx/debug/AgentLLM.build/include/AgentLLM-Swift.h","-swift-version","6","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","agentllm"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/toddbruss/Documents/GitHub/AgentLLM/Sources/AgentLLM/","/Users/toddbruss/Documents/GitHub/AgentLLM/Package.swift","/Users/toddbruss/Documents/GitHub/AgentLLM/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

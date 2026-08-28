@@ -9,7 +9,7 @@
 //       id: "my-provider",
 //       displayName: "My LLM",
 //       kind: .cloudAPI,
-//       endpoint: LLMEndpoint(baseURL: "https://api.example.com"),
+//       endpoint: LLMEndpoint(chatURL: "https://api.example.com/v1/chat/completions"),
 //       apiKey: "sk-...",
 //       model: "my-model-v1"
 //   )

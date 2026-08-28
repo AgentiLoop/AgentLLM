@@ -3,7 +3,7 @@ import Foundation
 /// Central registry for all available LLM providers.
 /// Register providers at app startup. Look them up by ID.
 @MainActor
-public final class LLMRegistry: @unchecked Sendable {
+public final class LLMRegistry {
     public static let shared = LLMRegistry()
 
     /// Registered provider configs, keyed by provider ID
