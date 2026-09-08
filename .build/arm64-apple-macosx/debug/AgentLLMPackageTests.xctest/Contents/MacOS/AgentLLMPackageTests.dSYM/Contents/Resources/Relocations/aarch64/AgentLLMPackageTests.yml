@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/toddbruss/Documents/GitHub/AgentLLM/.build/arm64-apple-macosx/debug/AgentLLMPackageTests.xctest/Contents/MacOS/AgentLLMPackageTests'
+relocations:     []
+...

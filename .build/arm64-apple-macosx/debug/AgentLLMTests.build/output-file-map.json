@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/toddbruss/Documents/GitHub/AgentLLM/.build/arm64-apple-macosx/debug/AgentLLMTests.build/primary.swiftdeps"
+  },
+  "/Users/toddbruss/Documents/GitHub/AgentLLM/Tests/AgentLLMTests/LLMRegistryTests.swift": {
+    "dependencies": "/Users/toddbruss/Documents/GitHub/AgentLLM/.build/arm64-apple-macosx/debug/AgentLLMTests.build/LLMRegistryTests.d",
+    "object": "/Users/toddbruss/Documents/GitHub/AgentLLM/.build/arm64-apple-macosx/debug/AgentLLMTests.build/LLMRegistryTests.swift.o",
+    "swiftmodule": "/Users/toddbruss/Documents/GitHub/AgentLLM/.build/arm64-apple-macosx/debug/AgentLLMTests.build/LLMRegistryTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/toddbruss/Documents/GitHub/AgentLLM/.build/arm64-apple-macosx/debug/AgentLLMTests.build/LLMRegistryTests.swiftdeps",
+    "diagnostics": "/Users/toddbruss/Documents/GitHub/AgentLLM/.build/arm64-apple-macosx/debug/AgentLLMTests.build/LLMRegistryTests.dia"
+  }
+}

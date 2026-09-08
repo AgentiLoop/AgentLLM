@@ -57,9 +57,10 @@ public final class LLMRegistry {
 
     // MARK: - Mutation
 
-    /// Update a provider's config
+    /// Update a provider's config. Unknown IDs are registered (appended to display order)
+    /// instead of being stored invisibly.
     public func update(_ config: LLMProviderConfig) {
-        configs[config.id] = config
+        register(config)
     }
 
     /// Update just the API key for a provider
